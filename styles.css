@@ -1,0 +1,25 @@
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+h2{
+    display: inline;
+    float: left;
+}
+
+.side-text {
+    display: inline;
+    float: right;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 20%;
+  }
+
+.row-padding {
+    padding-left: 2%;
+}
