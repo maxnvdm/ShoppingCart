@@ -1,25 +1,30 @@
-.center {
+#content {
     margin: auto;
-    width: 60%;
     padding: 10px;
-}
-
-h2{
-    display: inline;
-    float: left;
-}
-
-.side-text {
-    display: inline;
-    float: right;
+    max-width: 600px;
 }
 
 /* Create three equal columns that floats next to each other */
 .column {
-    float: left;
-    width: 20%;
+    /* float: left; */
+    display: inline-block;
+    width: 25%;
+    margin: 5px;
   }
 
 .row-padding {
     padding-left: 2%;
+}
+
+header{
+    position: relative;
+}
+
+div h2{
+    color: rgb(209, 95, 121);
+}
+
+div p{
+    padding-top: 5px;
+    padding-left: 15px;
 }
