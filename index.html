@@ -11,6 +11,7 @@
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
+        <script src="shopping.js"></script>
     </head>
     <body>
         <div id="content">
@@ -20,7 +21,7 @@
         </header>
         
         <div>
-            <div class="column row-padding">
+            <div class="column row-padding" style = "white-space: nowrap">
                 <!-- Stars-->
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
@@ -49,7 +50,18 @@
 
             <p>ONLINE EXCLUSIVE</p>
 
-            <span><strong>COLOR:</strong> Electric Red</span>
+            <span>
+                <strong>COLOR:</strong>
+            </span>
+            <span id="color-choice">Select a color</span>
+
+            <div id="color-chooser">
+                <button class="inline-block button button-blue" onclick="colorSelect('Blue');"></button>
+                <button class="inline-block button button-red" onclick="colorSelect('Red');"></button>
+                <button class="inline-block button button-green" onclick="colorSelect('Green');"></button>
+
+            </div>
+
         </div>
 
     </body>

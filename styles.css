@@ -28,3 +28,27 @@ div p{
     padding-top: 5px;
     padding-left: 15px;
 }
+
+.inline-block{
+    display: inline-block;
+}
+
+.button {
+    border: none;
+    padding: 14px; 
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
+}
+
+.button-blue {
+    background-color: blue;
+}
+
+.button-red {
+    background-color: red;
+}
+
+.button-green {
+    background-color: green;
+}
