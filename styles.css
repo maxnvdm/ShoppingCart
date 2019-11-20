@@ -42,13 +42,73 @@ div p{
 }
 
 .button-blue {
-    background-color: blue;
+    background-color: #6327F4;
 }
 
 .button-red {
-    background-color: red;
+    background-color: #C62930;
 }
 
-.button-green {
-    background-color: green;
+.button-black {
+    background-color: black;
+}
+
+.button-white {
+    background-color: white;
+}
+
+.button-orange {
+    background-color: orange;
+}
+
+.button-yellow {
+    background-color: yellow;
+}
+
+.button-navy-blue {
+    background-color: #1D53AE;
+}
+
+.button-tourquise {
+    background-color: #285A7B;
+}
+
+.button-beige {
+    background-color: #DAB595;
+}
+
+.button-sky-blue {
+    background-color: #54C0F9;
+}
+
+.button-lime-green {
+    background-color: #90FA4D;
+}
+
+.button-pink {
+    background-color: #EA37B3;
+}
+
+.button-cream {
+    background-color: #DAB595;
+}
+
+.button-emerald-green {
+    background-color: #418D65;
+}
+
+.button-dark-grey {
+    background-color: #6F6975;
+}
+
+.button-brown {
+    background-color: #6E502B;
+}
+
+.button-aqua-marine {
+    background-color: #69DAD1;
+}
+
+.button-light-grey {
+    background-color: #C4C4C4;
 }
