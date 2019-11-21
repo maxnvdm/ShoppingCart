@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <script src="shopping.js"></script>
     </head>
 
     <body>
@@ -86,7 +85,7 @@
             <p><strong>Your Custom Fit</strong></p>
 
             <div>
-                <button class="quantity-button"><strong>0</strong></button>
+                <button id="quantity" class="quantity-button"><strong>0</strong></button>
                 <button class="cart-button" data-toggle="modal" data-target="#myModal"><strong>Add to Cart</strong></button>
 
                 <!-- Modal -->
@@ -98,21 +97,33 @@
                             <div class="modal-body">
                             <p>Please add the quantity of the item you have selected</p>
                             <div class="inline-block">
-                                <span id="color-choice2" style="margin: 60px;"></span>
-                                <button class="minus-button"><strong>-</strong></button>
-                                <span id="qauntity-value" style="font-size: 30px; margin: 15px;">0</span>
-                                <button class="minus-button" onclick="increment()"><strong>+</strong></button>
+                                <span id="color-choice2" style="margin: 50px;"></span>
+                                <button class="minus-button" onclick="decrement();"><strong>-</strong></button>
+                                <span id="quant" style="font-size: 30px; margin: 15px;">0</span>
+                                <button class="minus-button" onclick="increment();"><strong>+</strong></button>
                             </div>
-
+                            <br>
+                            <div class="inline-blocl">
+                                <button type="button" class="btn btn-default btn-pad" data-dismiss="modal" style="background-color: rgba(157, 247, 217, 0.61);" onclick="updateCart();">Agree</button>
+                                <button type="button" class="btn btn-default btn-pad" data-dismiss="modal" style="background-color: rgba(255, 182, 193, 0.719);">Cancel</button>
+                            </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <hr>
+            <div>
+                <p><strong>DETAILS</strong></p>
+            </div>
+            <hr style="background-color: black; color: black; height: 1px;">
+            <p><strong>Need Help?</strong></p>
+            <p><strong>Shipping & Returns</strong></p>
 
 
         </div>
+
+        <script src="shopping.js"></script>
 
     </body>
 </html>
