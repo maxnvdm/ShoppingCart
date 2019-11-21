@@ -33,7 +33,7 @@ div p{
     display: inline-block;
 }
 
-.button {
+.color-button {
     border: none;
     padding: 14px; 
     border-radius: 50%;
@@ -41,12 +41,64 @@ div p{
     font-size: 16px;
 }
 
-button:focus {
+.color-button:focus {
     outline: none;
     box-shadow:  0 0 0 2px rgb(255, 255, 255), 0 0 0 4px #4d535c;
 }
 
-.button-blue {
+.quantity-button {
+    background-color: white;
+    border: black;
+    box-shadow: 0 0 0 1px black;
+    border-radius: 50px/36px;
+    font-size: 16px;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.quantity-button:focus {
+    outline: none;
+}
+
+.cart-button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px/36px;
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.modal {
+    width: 500px;
+    height: 300px;
+    margin:0 auto;
+    /* display:table; */
+    position: absolute;
+    left: 0;
+    right:0;
+    /* top: 50%;  */
+    transform:translateY(50%);
+}
+
+.minus-button {
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    font-size: 40px;
+    background-color: black;
+    color: white;
+    width: 60px;
+}
+
+.button-violet {
     background-color: #6327F4;
 }
 

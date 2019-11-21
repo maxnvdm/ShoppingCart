@@ -11,8 +11,12 @@
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <script src="shopping.js"></script>
     </head>
+
     <body>
         <div id="content">
         <!-- Heading-->
@@ -53,33 +57,61 @@
             <span>
                 <strong>COLOR:</strong>
             </span>
-            <span id="color-choice">Select a color</span>
+            <span id="color-choice1">Select a color</span>
 
             <div id="color-chooser">
-                <button class="inline-block button button-red" onclick="colorSelect('Red');"></button>
-                <button class="inline-block button button-blue" onclick="colorSelect('Blue');"></button>
-                <button class="inline-block button button-black" onclick="colorSelect('Black');"></button>
-                <button class="inline-block button button-white" onclick="colorSelect('White');"></button>
-                <button class="inline-block button button-orange" onclick="colorSelect('Orange');"></button>
-                <button class="inline-block button button-yellow" onclick="colorSelect('Yellow');"></button>
-                <button class="inline-block button button-navy-blue" onclick="colorSelect('Navy Blue');"></button>
-                <button class="inline-block button button-tourquise" onclick="colorSelect('Tourquise');"></button>
-                <button class="inline-block button button-beige" onclick="colorSelect('Beige');"></button>
-                <button class="inline-block button button-sky-blue" onclick="colorSelect('Sky Blue');"></button>
-                <button class="inline-block button button-lime-green" onclick="colorSelect('Lime Green');"></button>
-                <button class="inline-block button button-pink" onclick="colorSelect('Pink');"></button>
-                <button class="inline-block button button-cream" onclick="colorSelect('Cream');"></button>
-                <button class="inline-block button button-emerald-green" onclick="colorSelect('Emerald Green');"></button>
-                <button class="inline-block button button-dark-grey" onclick="colorSelect('Dark Grey');"></button>
-                <button class="inline-block button button-brown" onclick="colorSelect('Brown');"></button>
-                <button class="inline-block button button-aqua-marine" onclick="colorSelect('Aqua Marine');"></button>
-                <button class="inline-block button button-light-grey" onclick="colorSelect('Light Grey');"></button>
+                <button class="inline-block color-button button-red" onclick="colorSelect('Red');"></button>
+                <button class="inline-block color-button button-violet" onclick="colorSelect('Violet');"></button>
+                <button class="inline-block color-button button-black" onclick="colorSelect('Black');"></button>
+                <button class="inline-block color-button button-white" onclick="colorSelect('White');"></button>
+                <button class="inline-block color-button button-orange" onclick="colorSelect('Orange');"></button>
+                <button class="inline-block color-button button-yellow" onclick="colorSelect('Yellow');"></button>
+                <button class="inline-block color-button button-navy-blue" onclick="colorSelect('Navy Blue');"></button>
+                <button class="inline-block color-button button-tourquise" onclick="colorSelect('Tourquise');"></button>
+                <button class="inline-block color-button button-beige" onclick="colorSelect('Beige');"></button>
+                <button class="inline-block color-button button-sky-blue" onclick="colorSelect('Sky Blue');"></button>
+                <button class="inline-block color-button button-lime-green" onclick="colorSelect('Lime Green');"></button>
+                <button class="inline-block color-button button-pink" onclick="colorSelect('Pink');"></button>
+                <button class="inline-block color-button button-cream" onclick="colorSelect('Cream');"></button>
+                <button class="inline-block color-button button-emerald-green" onclick="colorSelect('Emerald Green');"></button>
+                <button class="inline-block color-button button-dark-grey" onclick="colorSelect('Dark Grey');"></button>
+                <button class="inline-block color-button button-brown" onclick="colorSelect('Brown');"></button>
+                <button class="inline-block color-button button-aqua-marine" onclick="colorSelect('Aqua Marine');"></button>
+                <button class="inline-block color-button button-light-grey" onclick="colorSelect('Light Grey');"></button>
 
             </div>
 
             <p><strong>Size Guide</strong></p>
 
             <p><strong>Your Custom Fit</strong></p>
+
+            <div>
+                <button class="quantity-button"><strong>0</strong></button>
+                <button class="cart-button" data-toggle="modal" data-target="#myModal"><strong>Add to Cart</strong></button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-body">
+                            <p>Please add the quantity of the item you have selected</p>
+                            <div class="inline-block">
+                                <span id="color-choice2" style="margin: 60px;"></span>
+                                <button class="minus-button"><strong>-</strong></button>
+                                <span id="qauntity-value" style="font-size: 30px; margin: 15px;">0</span>
+                                <button class="minus-button" onclick="increment()"><strong>+</strong></button>
+                            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
 
     </body>
