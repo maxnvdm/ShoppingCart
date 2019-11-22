@@ -106,8 +106,8 @@ div p{
     margin-top: 30px;
 }
 
-hr {
-    height: 2px;
+div hr {
+    height: 1px;
     color: black;
     background-color: black;
 }
@@ -140,7 +140,7 @@ hr {
     background-color: #1D53AE;
 }
 
-.button-tourquise {
+.button-turquoise {
     background-color: #285A7B;
 }
 

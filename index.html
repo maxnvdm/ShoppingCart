@@ -66,7 +66,7 @@
                 <button class="inline-block color-button button-orange" onclick="colorSelect('Orange');"></button>
                 <button class="inline-block color-button button-yellow" onclick="colorSelect('Yellow');"></button>
                 <button class="inline-block color-button button-navy-blue" onclick="colorSelect('Navy Blue');"></button>
-                <button class="inline-block color-button button-tourquise" onclick="colorSelect('Tourquise');"></button>
+                <button class="inline-block color-button button-turquoise" onclick="colorSelect('Turquoise');"></button>
                 <button class="inline-block color-button button-beige" onclick="colorSelect('Beige');"></button>
                 <button class="inline-block color-button button-sky-blue" onclick="colorSelect('Sky Blue');"></button>
                 <button class="inline-block color-button button-lime-green" onclick="colorSelect('Lime Green');"></button>
@@ -86,7 +86,7 @@
 
             <div>
                 <button id="quantity" class="quantity-button"><strong>0</strong></button>
-                <button class="cart-button" data-toggle="modal" data-target="#myModal"><strong>Add to Cart</strong></button>
+                <button class="cart-button" data-toggle="modal" data-target="#myModal" onclick="updateQuant();"><strong>Add to Cart</strong></button>
 
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" role="dialog">
@@ -103,9 +103,9 @@
                                 <button class="minus-button" onclick="increment();"><strong>+</strong></button>
                             </div>
                             <br>
-                            <div class="inline-blocl">
+                            <div class="inline-block">
                                 <button type="button" class="btn btn-default btn-pad" data-dismiss="modal" style="background-color: rgba(157, 247, 217, 0.61);" onclick="updateCart();">Agree</button>
-                                <button type="button" class="btn btn-default btn-pad" data-dismiss="modal" style="background-color: rgba(255, 182, 193, 0.719);">Cancel</button>
+                                <button type="button" class="btn btn-default btn-pad" data-dismiss="modal" style="background-color: rgba(255, 182, 193, 0.719);" onclick="resetQuantity();">Cancel</button>
                             </div>
                             </div>
                         </div>
@@ -113,10 +113,15 @@
                 </div>
             </div>
             <hr>
-            <div>
+            <div id="details">
                 <p><strong>DETAILS</strong></p>
+                <!-- Use the same color circles from the color selector -->
+                <!-- Circles correspond to number of that color in the cart -->
+                <!-- Remove circles by clicking on them -->
+
+
             </div>
-            <hr style="background-color: black; color: black; height: 1px;">
+            <hr>
             <p><strong>Need Help?</strong></p>
             <p><strong>Shipping & Returns</strong></p>
 
