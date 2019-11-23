@@ -84,8 +84,14 @@ function updateCart(){
 
 function updateQuant(){
     let color = document.getElementById("color-choice1").innerText;
-    document.querySelector("#quant").innerText = colors[color];
-    quantity = colors[color];
+    if (color == 'Select a color'){
+        document.querySelector("#quant").innerText = "0";
+        quantity = 0;
+    } else {
+        document.querySelector("#quant").innerText = colors[color];
+        quantity = colors[color];
+    }
+    
 }
 
 function resetQuantity(){

@@ -86,7 +86,7 @@
 
             <div>
                 <button id="quantity" class="quantity-button"><strong>0</strong></button>
-                <button class="cart-button" data-toggle="modal" data-target="#myModal" onclick="updateQuant();"><strong>Add to Cart</strong></button>
+                <button class="cart-button button-animation" data-toggle="modal" data-target="#myModal" onclick="updateQuant();"><strong>Add to Cart</strong></button>
 
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" role="dialog">
@@ -98,7 +98,7 @@
                             <p>Please add the quantity of the item you have selected</p>
                             <br>
                             <div class="inline-block text-center">
-                                <span id="color-choice2" style="margin: 50px; vertical-align: 10px;"></span>
+                                <span id="color-choice2" style="margin: 50px; vertical-align: 10px;">Color to be selected</span>
                                 <button class="minus-button" onclick="decrement();">-</button>
                                 <span id="quant" style="font-size: 30px; margin: 15px; vertical-align: 10px;">0</span>
                                 <button class="minus-button" onclick="increment();">+</button>
