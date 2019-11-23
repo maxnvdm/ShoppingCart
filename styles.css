@@ -6,6 +6,15 @@
     max-width: 550px;
 }
 
+#modal-content {
+    vertical-align: middle;
+}
+
+.text-center {
+    text-align: center;
+    vertical-align: middle;
+}
+
 /* Create three equal columns that float next to each other */
 
 .column {
@@ -102,7 +111,7 @@ div p{
 /* Syling for pop-up modal */
 
 .modal {
-    width: 500px;
+    width: auto;
     height: 300px;
     margin:0 auto;
     /* display:table; */
@@ -117,13 +126,24 @@ div p{
 /* Syling for minus (also used for plus) button */
 
 .minus-button {
-    text-align: center;
+    display: inline-block;
     border: none;
     border-radius: 50%;
-    font-size: 40px;
+    font-size: 50px;
+    line-height: 50px;
     background-color: black;
     color: white;
-    width: 60px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 18%; 
+}
+
+.minus-button:focus {
+    outline: none;
 }
 
 /* Styling for agree and close button */
@@ -133,8 +153,20 @@ div p{
     /* lesft:40%; */
     margin: 10px;
     margin-top: 30px;
+    right: 15%;
+    border: 1px solid black;
 }
 
+.agree-btn {
+    background-color: rgba(124, 212, 131, 0.466);
+    border: 1px solid rgb(58, 167, 130);
+}
+
+.cancel-btn {
+    background-color: rgba(255, 182, 193, 0.719);
+    border: 1px solid rgb(139, 67, 78);
+
+}
 /* Styling for horizonal rule */
 
 div hr {

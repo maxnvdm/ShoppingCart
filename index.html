@@ -96,16 +96,17 @@
                         <div class="modal-content">
                             <div class="modal-body">
                             <p>Please add the quantity of the item you have selected</p>
-                            <div class="inline-block">
-                                <span id="color-choice2" style="margin: 50px;"></span>
-                                <button class="minus-button" onclick="decrement();"><strong>-</strong></button>
-                                <span id="quant" style="font-size: 30px; margin: 15px;">0</span>
-                                <button class="minus-button" onclick="increment();"><strong>+</strong></button>
+                            <br>
+                            <div class="inline-block text-center">
+                                <span id="color-choice2" style="margin: 50px; vertical-align: 10px;"></span>
+                                <button class="minus-button" onclick="decrement();">-</button>
+                                <span id="quant" style="font-size: 30px; margin: 15px; vertical-align: 10px;">0</span>
+                                <button class="minus-button" onclick="increment();">+</button>
                             </div>
                             <br>
-                            <div class="inline-block">
-                                <button type="button" class="btn btn-default btn-pad align-self-end" data-dismiss="modal" style="background-color: rgba(157, 247, 217, 0.61);" onclick="updateCart();">Agree</button>
-                                <button type="button" class="btn btn-default btn-pad align-self-end" data-dismiss="modal" style="background-color: rgba(255, 182, 193, 0.719);" onclick="resetQuantity();">Cancel</button>
+                            <div class="inline-block float-right">
+                                    <button type="button" class="btn btn-default btn-pad agree-btn" data-dismiss="modal" onclick="updateCart();"><strong>Agree</strong></button>
+                                    <button type="button" class="btn btn-default btn-pad cancel-btn" data-dismiss="modal" onclick="resetQuantity();"><strong>Cancel</strong></button>
                             </div>
                             </div>
                         </div>
@@ -118,6 +119,7 @@
                 <!-- Use the same color circles from the color selector -->
                 <!-- Circles correspond to number of that color in the cart -->
                 <!-- Remove circles by clicking on them -->
+                <!-- Circles are created and added via js-->
 
 
             </div>
