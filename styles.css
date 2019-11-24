@@ -20,7 +20,7 @@
 .column {
     /* float: left; */
     display: inline-block;
-    width: 25%;
+    width: auto;
     margin: 5px;
   }
 
