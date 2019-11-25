@@ -49,6 +49,7 @@ let colorbuttons = {
 function colorSelect(color){
     document.getElementById("color-choice1").innerHTML = color;
     document.getElementById("color-choice2").innerHTML = color;
+    document.querySelector(".cart-button").innerHTML = "<strong>Add to Cart</strong>";
 }
 
 function increment(){
@@ -57,8 +58,13 @@ function increment(){
 }
 
 function decrement(){
-    quantity--;
-    document.querySelector("#quant").innerHTML = quantity;
+    if(quantity>0){
+        quantity--;
+        document.querySelector("#quant").innerHTML = quantity;
+    } else {
+        document.querySelector("#quant").innerHTML = quantity;
+    }
+    
 }
 
 function updateCart(){
@@ -80,6 +86,9 @@ function updateCart(){
     }
     document.querySelector("#details").innerHTML = "<p><strong>DETAILS</strong></p>"+details;
     details = "";
+
+    // Change Add to Cart button text to Checkout
+    document.querySelector(".cart-button").innerHTML = "<strong>Checkout now</strong>";
 }
 
 function updateQuant(){
