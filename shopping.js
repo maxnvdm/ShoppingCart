@@ -8,9 +8,10 @@ let colors = ["Red", "Violet", "Black", "White", "Orange", "Yellow", "Navy Blue"
 let colorclasses;
 
 class Color {
-    constructor(color) {
+    constructor(color, cost) {
         this.name = color;
         this.quantity = 0;
+        this.price = cost;
     }
     get button() {
         let btnName = this.name.toLowerCase().replace(" ","-");
@@ -22,28 +23,31 @@ class Color {
     get quantityGet() {
         return this.quantity;
     }
+    get priceGet() {
+        return this.price;
+    }
 }
 
 function createColors() {
     colorclasses = {
-        "Red": new Color("Red"),
-        "Violet": new Color("Violet"),
-        "Black": new Color("Black"),
-        "White": new Color("White"),
-        "Orange": new Color("Orange"),
-        "Yellow": new Color("Yellow"),
-        "Navy Blue": new Color("Navy Blue"),
-        "Turquoise": new Color("Turquoise"),
-        "Beige": new Color("Beige"),
-        "Sky Blue": new Color("Sky Blue"),
-        "Lime Green": new Color("Lime Green"),
-        "Pink": new Color("Pink"),
-        "Cream": new Color("Cream"),
-        "Emerald Green": new Color("Emerald Green"),
-        "Dark Grey": new Color("Dark Grey"),
-        "Brown": new Color("Brown"),
-        "Aqua Marine": new Color("Aqua Marine"),
-        "Light Grey": new Color("Light Grey"),
+        "Red": new Color("Red", 14.99),
+        "Violet": new Color("Violet", 15.99),
+        "Black": new Color("Black", 20.99),
+        "White": new Color("White", 19.99),
+        "Orange": new Color("Orange", 16.99),
+        "Yellow": new Color("Yellow", 17.99),
+        "Navy Blue": new Color("Navy Blue", 18.99),
+        "Turquoise": new Color("Turquoise", 13.99),
+        "Beige": new Color("Beige", 12.99),
+        "Sky Blue": new Color("Sky Blue", 21.99),
+        "Lime Green": new Color("Lime Green", 11.99),
+        "Pink": new Color("Pink", 16.49),
+        "Cream": new Color("Cream", 13.49),
+        "Emerald Green": new Color("Emerald Green", 17.49),
+        "Dark Grey": new Color("Dark Grey", 18.49),
+        "Brown": new Color("Brown", 12.49),
+        "Aqua Marine": new Color("Aqua Marine", 19.49),
+        "Light Grey": new Color("Light Grey", 16.49),
     }
 }
 
@@ -52,6 +56,7 @@ function colorSelect(color) {
     document.getElementById("color-choice1").innerHTML = color;
     document.getElementById("color-choice2").innerHTML = color;
     document.querySelector(".cart-button").innerHTML = "<strong>Add to Cart</strong>";
+    document.querySelector("#price").innerText = "$"+colorclasses[color].priceGet;
 }
 
 // Increment the quantity of the item and update the html

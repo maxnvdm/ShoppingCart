@@ -68,6 +68,8 @@ div p{
     transition: 0.2s;
 }
 
+/* Color button hover styling */
+
 .color-button:hover {
     border-radius: 50%;
     box-shadow: 0 0 0 2px #a4afc0;
