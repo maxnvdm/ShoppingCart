@@ -6,6 +6,8 @@
     max-width: 550px;
 }
 
+
+
 #modal-content {
     vertical-align: middle;
 }
@@ -63,6 +65,12 @@ div p{
     border-radius: 50%;
     margin: 8px;
     font-size: 16px;
+    transition: 0.2s;
+}
+
+.color-button:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #a4afc0;
 }
 
 /* Syling for color buttons in focus */
@@ -147,15 +155,7 @@ div p{
 /* Syling for pop-up modal */
 
 .modal {
-    /* width: auto; */
-    /* height: 300px; */
     margin:0 auto;
-    /* display:table; */
-    /* position: absolute; */
-    /* left: 0; */
-    /* right:0; */
-    /* top: 50%;  */
-    /* transform:translateY(50%); */
     text-align: center;
     position: fixed;
     top: 50%;
@@ -176,7 +176,8 @@ float: left;
 float: right;
 }
 
-/* The Close Button */
+/* Styling for the close Button (X in need help modal)*/
+
 .close {
     color: darkgrey;
     float: right;
@@ -184,7 +185,6 @@ float: right;
     font-weight: bold;
   }
   
-.close:hover,
 .close:focus {
     color: #000;
     text-decoration: none;
@@ -221,7 +221,7 @@ float: right;
     background-color: darkgrey;
 }
 
-/* Styling for agree and close button */
+/* Styling for agree and close/cancel button */
 
 .btn-pad {
     position: relative;
@@ -242,6 +242,7 @@ float: right;
     border: 1px solid rgb(139, 67, 78);
 
 }
+
 /* Styling for horizonal rule */
 
 div hr {
@@ -249,6 +250,8 @@ div hr {
     color: black;
     background-color: black;
 }
+
+/* Styling for Need Help text/button */
 
 .text-button {
     background:none;

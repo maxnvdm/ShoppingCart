@@ -47,18 +47,21 @@ function createColors() {
     }
 }
 
-function colorSelect(color){
+// Change the color to the user selected option
+function colorSelect(color) {
     document.getElementById("color-choice1").innerHTML = color;
     document.getElementById("color-choice2").innerHTML = color;
     document.querySelector(".cart-button").innerHTML = "<strong>Add to Cart</strong>";
 }
 
-function increment(){
+// Increment the quantity of the item and update the html
+function increment() {
     quantity++;
     document.querySelector("#quant").innerHTML = quantity;
 }
 
-function decrement(){
+// Decrement the quantity of the item and update the html
+function decrement() {
     if(quantity>0){
         quantity--;
         document.querySelector("#quant").innerHTML = quantity;
@@ -67,7 +70,8 @@ function decrement(){
     }   
 }
 
-function updateCart(){
+// Updates the cart after the user clicks agree (on modal)
+function updateCart() {
     // Fetch the current color choice
     let color = document.getElementById("color-choice2").innerText;
     // Set that color's quantity to the selected amount
@@ -80,10 +84,8 @@ function updateCart(){
     document.querySelector("#quantity").innerHTML = cart;
 
     // Set the color icons below DETAILS
-    for(const item of colors){
-        // console.log(item, colorclasses[item])
-
-        if(colorclasses[item].quantityGet != 0){
+    for(const item of colors) {
+        if(colorclasses[item].quantityGet != 0) {
             for (let i = colorclasses[item].quantityGet; i > 0; i--){
                 details +=colorclasses[item].button;
             }
@@ -105,7 +107,6 @@ function updateQuant(){
         document.querySelector("#quant").innerText = colorclasses[color].quantityGet;
         quantity = colorclasses[color].quantityGet;
     }
-    
 }
 
 function resetQuantity(){
