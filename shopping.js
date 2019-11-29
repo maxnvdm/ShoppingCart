@@ -8,7 +8,7 @@ let colors = ["Red", "Violet", "Black", "White", "Orange", "Yellow", "Navy Blue"
 let colorclasses;
 
 
-// Color class with the associated attributes and methods
+// Color class with the associated attributes and methods (getters and setters)
 class Color {
     constructor(color, cost) {
         this.name = color;
@@ -112,6 +112,7 @@ function updateCart() {
     document.querySelector("#add-to-cart-button").dataset.target = "#checkoutModal";
 }
 
+// Updates the color choice and quantity in the modal
 function updateQuant(){
     let color = document.getElementById("color-choice1").innerText;
     if (color == 'Select a color'){
@@ -121,6 +122,24 @@ function updateQuant(){
         document.querySelector("#quant").innerText = colorclasses[color].quantityGet;
         quantity = colorclasses[color].quantityGet;
     }
+
+    // Load the checkout modal with the cart items
+    let items = "";
+    let total = 0;
+    for(const item of colors) {
+        if(colorclasses[item].quantityGet != 0) {
+            items += "<p>";
+            for (let i = colorclasses[item].quantityGet; i > 0; i--){
+                items += colorclasses[item].button;
+                total += colorclasses[item].priceGet; 
+            }
+            items += '<span class="inline-block" style="float: right; padding: 10px; margin-right: 20px;"><strong> X '+colorclasses[item].priceGet+' = '+(colorclasses[item].priceGet*colorclasses[item].quantityGet).toFixed(2)+'</strong></span>';
+            items += "</p>";
+        }
+    }
+    items += "<br>"
+    items += "<h4>Cart total = " + total.toFixed(2) + "</h4>"
+    document.querySelector("#summary").innerHTML = items;
 }
 
 function resetQuantity(){
