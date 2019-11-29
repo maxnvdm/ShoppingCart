@@ -7,6 +7,8 @@ let details = "";
 let colors = ["Red", "Violet", "Black", "White", "Orange", "Yellow", "Navy Blue", "Turquoise", "Beige", "Sky Blue", "Lime Green", "Pink", "Cream", "Emerald Green", "Dark Grey", "Brown", "Aqua Marine", "Light Grey"];
 let colorclasses;
 
+
+// Color class with the associated attributes and methods
 class Color {
     constructor(color, cost) {
         this.name = color;
@@ -28,6 +30,7 @@ class Color {
     }
 }
 
+// Create the color objects that are for sale
 function createColors() {
     colorclasses = {
         "Red": new Color("Red", 14.99),
@@ -57,6 +60,9 @@ function colorSelect(color) {
     document.getElementById("color-choice2").innerHTML = color;
     document.querySelector(".cart-button").innerHTML = "<strong>Add to Cart</strong>";
     document.querySelector("#price").innerText = "$"+colorclasses[color].priceGet;
+    document.querySelector("#original-price").innerText = "$"+ (colorclasses[color].priceGet*1.25).toFixed(2);
+    document.querySelector("#add-to-cart-button").dataset.target = "#myModal";
+
 }
 
 // Increment the quantity of the item and update the html
@@ -81,26 +87,29 @@ function updateCart() {
     let color = document.getElementById("color-choice2").innerText;
     // Set that color's quantity to the selected amount
     colorclasses[color].quantitySet = quantity;
-
     // Get the total number of colors in the cart
     cart = sumItems(colorclasses);
-
     // Update the cart text to the total number of items
     document.querySelector("#quantity").innerHTML = cart;
-
-    // Set the color icons below DETAILS
+    // Variable to track total cost
+    let total = 0;
+    // Set the color icons below the DETAILS section and calculate total
     for(const item of colors) {
         if(colorclasses[item].quantityGet != 0) {
             for (let i = colorclasses[item].quantityGet; i > 0; i--){
-                details +=colorclasses[item].button;
+                details += colorclasses[item].button;
+                total += colorclasses[item].priceGet; 
             }
         }
     }
     document.querySelector("#details").innerHTML = "<p><strong>DETAILS</strong></p>"+details;
     details = "";
+    document.querySelector("#price").innerText = "$"+total.toFixed(2);
+    document.querySelector("#original-price").innerText = "$"+ (total*1.25).toFixed(2);
 
-    // Change Add to Cart button text to Checkout
-    document.querySelector(".cart-button").innerHTML = "<strong>Checkout now</strong>";
+    // Change Add to Cart button text to Checkout and redirect to checkout modal
+    document.querySelector("#add-to-cart-button").innerHTML = "<strong>Checkout now</strong>";
+    document.querySelector("#add-to-cart-button").dataset.target = "#checkoutModal";
 }
 
 function updateQuant(){

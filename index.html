@@ -44,7 +44,7 @@
             </div>
 
             <div class="column">
-                <span class="text-muted">$17.99</span>
+                <span id="original-price" class="text-muted">$17.99</span>
             </div>
 
             <div class="column">
@@ -86,12 +86,11 @@
 
             <div>
                 <button id="quantity" class="quantity-button"><strong>0</strong></button>
-                <button class="cart-button button-animation" data-toggle="modal" data-target="#myModal" onclick="updateQuant();"><strong>Add to Cart</strong></button>
-
+                <button id="add-to-cart-button" class="cart-button button-animation" data-toggle="modal" data-target="#myModal" onclick="updateQuant();"><strong>Add to Cart</strong></button>
+                
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
-                
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-body">
@@ -113,12 +112,30 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="modal fade" id="checkoutModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title">Shopping Cart</h4>
+                        </div>
+                        <div id="summary" class="modal-body">
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="cart-button button-animation" data-dismiss="modal">Proceed to Checkout</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <hr>
             <div id="details">
                 <p><strong>DETAILS</strong></p>
                 <!-- Use the same color circles from the color selector -->
                 <!-- Circles correspond to number of that color in the cart -->
-                <!-- Remove circles by clicking on them -->
                 <!-- Circles are created and added via js-->
 
 
